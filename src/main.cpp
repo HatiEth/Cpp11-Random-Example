@@ -9,11 +9,13 @@ int main(int argc, char** argv)
     cout << "Starting Cpp11-Random Test" << endl;
 
 #if 0
+    // Generates duplicate pseudo-random numbers with below code
     default_random_engine drng0{0};
     default_random_engine drng1{random_device{}()};
     default_random_engine drng2{0};
 #elif 0
 #else
+    // Produces proper pseudo-random numbers with below code
     ranlux24_base drng0{0};
     ranlux24_base drng1{random_device{}()};
     ranlux24_base drng2{0};
